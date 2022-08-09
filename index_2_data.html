@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        私の名前は{{ persons[1].name }}です。
+        年齢は{{ persons[1].age }}です。
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                persons: [
+                    {
+                        message: 'Hello',
+                        greeting: 'こんばんは',
+                        name: '吉田',
+                        age: '39',
+                        address: {
+                            prefecture: '大阪府',
+                            city: '大阪市',
+                            town: '大坂町',
+                            other: '1丁目1番地'
+                        }
+                    },
+                    {
+                        message: 'Hello',
+                        greeting: 'こんばんは',
+                        name: '山田',
+                        age: '24',
+                        address: {
+                            prefecture: '京都府',
+                            city: '大阪市',
+                            town: '大坂町',
+                            other: '1丁目1番地'
+                        }
+                    },
+                    {
+                        message: 'Hello',
+                        greeting: 'こんばんは',
+                        name: '鈴木',
+                        age: '42',
+                        address: {
+                            prefecture: '大阪府',
+                            city: '大阪市',
+                            town: '大坂町',
+                            other: '1丁目1番地'
+                        }
+                    },
+                    {
+                        message: 'Hello',
+                        greeting: 'こんばんは',
+                        name: '吉田',
+                        age: '39',
+                        address: {
+                            prefecture: '大阪府',
+                            city: '大阪市',
+                            town: '大坂町',
+                            other: '1丁目1番地'
+                        }
+                    },
+                ]
+            },
+        })
+
+    </script>
+
+</body>
+</html>

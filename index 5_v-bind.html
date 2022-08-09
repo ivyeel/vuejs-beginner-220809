@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <img v-bind:src="imagePath" :width="width">
+        </div>
+
+        <button @click="clickDogButton">イヌ</button>
+        <button @click="clickCatButton">ネコ</button>
+        <button @click="widenImage">幅を600にする</button>
+
+
+        <!-- <a v-bind:href="url">こちらへ</a> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                imagePath: 'https://img.benesse-cms.jp/pet-cat/item/image/normal/3315437f-8cd9-4741-acc7-19c550e92bde.jpg?w=1120&h=1120&resize_type=cover&resize_mode=force',
+                width:300
+
+                // url: "https://google.com/"
+            },
+            methods: {
+                clickDogButton: function(){
+                    this.imagePath = 'https://guide.line.me/ja/dogday_01.jpg'
+                },
+                clickCatButton: function(){
+                    this.imagePath = 'https://img.benesse-cms.jp/pet-cat/item/image/normal/3315437f-8cd9-4741-acc7-19c550e92bde.jpg?w=1120&h=1120&resize_type=cover&resize_mode=force'
+                },
+                widenImage: function(){
+                    this.width = 600
+                }
+            }
+        })
+
+    </script>
+
+</body>
+</html>
