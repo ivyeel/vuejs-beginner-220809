@@ -11,3 +11,16 @@ CDN
 
 
 console.log の代わりに alert が使える
+
+v-if v-show 違い 条件付きレンダリング — Vue.js
+https://jp.vuejs.org/v2/guide/conditional.html#v-if-vs-v-show
+一般的に、v-if はより高い切り替えコストを持っているのに対して、 
+v-show はより高い初期描画コストを持っています。
+ そのため、とても頻繁に何かを切り替える必要があれば v-show を選び、
+ 条件が実行時に変更することがほとんどない場合は、v-if を選びます。
+
+
+text
+checkbox
+radio
+textarea
