@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warning1 {
+            background-color: red;
+        }
+        .warning2 {
+            background-color: blue;
+            color:white;
+        }
+        .border_yellow {
+            border: double 10px yellow;
+        }
+        .border_pink {
+            border: double 10px pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <div v-bind:class="[warningClass, borderClass]">これは警告です。</div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                warningClass: 'warning2',
+                borderClass: 'border_yellow',
+            }
+        })
+
+    </script>
+
+</body>
+</html>
