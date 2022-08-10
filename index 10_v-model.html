@@ -11,10 +11,11 @@
 </head>
 <body>
     <div id="app">
-        <input type="radio" v-model="hobby" value="1" />音楽<br/>
-        <input type="radio" v-model="hobby" value="2" />スポーツ<br/>
-        <input type="radio" v-model="hobby" value="3" />映画<br/>
-        <p>{{ hobby }}</p>
+        <h1>趣味</h1>
+        <select v-model="selected">
+            <option v-for="friend in friends" :value="friend.name">{{ friend.name }}</option>
+        </select>
+        <p>{{ selected }}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
@@ -22,7 +23,25 @@
         new Vue({
             el: '#app',
             data: {
-                hobby: null
+                selected: null,
+                friends: [
+                    {
+                        id: 1,
+                        name: '吉田'                        
+                    },
+                    {
+                        id: 2,
+                        name: '山田'                        
+                    },
+                    {
+                        id: 3,
+                        name: '木村'                        
+                    },
+                    {
+                        id: 4,
+                        name: '椿本'                        
+                    },
+                ]
             },
         })
 
